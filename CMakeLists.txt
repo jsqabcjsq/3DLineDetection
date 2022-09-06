@@ -22,7 +22,12 @@ ELSE(OPENMP_FOUND AND WITH_OPENMP)
 ENDIF(OPENMP_FOUND AND WITH_OPENMP)
 
 # OpenCV
-#SET(OpenCV_DIR "E:/installer/opencv/build")
+Set(OpenCV_DIR /home/rvbust/Rvbust/Install/OpenCV/lib/cmake/opencv4)
 FIND_PACKAGE(OpenCV REQUIRED)
 
+
+set(LineFromPointCloud_INC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 ADD_SUBDIRECTORY(src)
+add_subdirectory(externals)
+ADD_SUBDIRECTORY(python)
+
